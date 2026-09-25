@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+        #counter {
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="counter">0</div>
+
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+    <button onclick="stopCounter()">Stop</button>
+
+    <script>
+        let count = 0;
+        let stopped = false;
+
+        function updateDisplay() {
+            document.getElementById("counter").innerText = count;
+        }
+
+        function increase() {
+            if (!stopped) {
+                count++;
+                updateDisplay();
+            }
+        }
+
+        function decrease() {
+            if (!stopped) {
+                count--;
+                updateDisplay();
+            }
+        }
+
+        function stopCounter() {
+            stopped = true;
+        }
+    </script>
+
+</body>
+</html>

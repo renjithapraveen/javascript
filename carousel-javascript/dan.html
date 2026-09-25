@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Auto Slider</title>
+
+    <style>
+        body {
+
+            margin: 0;
+
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+
+            font-family: 'Segoe UI', sans-serif;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            height: 100vh;
+
+            overflow: hidden;
+
+        }
+
+        .slider {
+
+            position: relative;
+
+            width: 80%;
+
+            max-width: 800px;
+
+            height: 400px;
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+
+        }
+
+        .slides {
+
+            display: flex;
+
+            width: 100%;
+
+            height: 100%;
+
+            transition: transform 0.6s ease;
+
+        }
+
+        .slide {
+
+            min-width: 100%;
+
+            height: 100%;
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+        /* Example slide backgrounds */
+
+        .slide1 {
+            background-image: url('https://picsum.photos/id/1018/800/400');
+        }
+
+        .slide2 {
+            background-image: url('https://picsum.photos/id/1025/800/400');
+        }
+
+        .slide3 {
+            background-image: url('https://picsum.photos/id/1040/800/400');
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="slider">
+
+        <div class="slides" id="slides">
+
+            <div class="slide slide1"></div>
+
+            <div class="slide slide2"></div>
+
+            <div class="slide slide3"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const slides = document.getElementById('slides');
+
+        const totalSlides = slides.children.length;
+
+        let index = 0;
+
+        setInterval(() => {
+
+            index = (index + 1) % totalSlides;
+
+            slides.style.transform = `translateX(-${index * 100}%)`;
+
+        }, 3000); // Change every 3 seconds
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.myslides {
+    height: 500px;
+    width: 50%;
+}
+
+img {
+    width: 200px;
+}
+body {
+    background-color: #deb878;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    /* Adjust based on your image height */
+
+
+    /* Hide all slides by default */
+.myslides {
+        display: none;
+        max-height: 100%;
+        /* Ensure images fit within container */
+        max-width: 100%;
+}

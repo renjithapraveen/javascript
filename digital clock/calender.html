@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calendar</title>
+</head>
+
+<body>
+
+    <h3 id="month"></h3>
+    <p id="calendar"></p>
+
+    <script>
+        const date = new Date();
+
+        const month = date.getMonth();
+        const year = date.getFullYear();
+
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        document.getElementById("month").innerHTML = months[month] + " " + year;
+
+        let calendar = "";
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            calendar += day + " ";
+        }
+
+        document.getElementById("calendar").innerHTML = calendar;
+    </script>
+
+</body>
+
+</html>

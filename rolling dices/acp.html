@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Number App</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+        }
+
+        #number {
+            font-size: 50px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Random Number Generator</h1>
+    <div id="number">0</div>
+    <button onclick="handleClick()">Click Me</button>
+
+    <script>
+        let interval;
+        let clickCount = 0;
+
+        function startChanging() {
+            interval = setInterval(() => {
+                document.getElementById("number").innerText = Math.floor(Math.random() * 100);}, 500);
+        }
+
+        function stopChanging() {
+            clearInterval(interval);
+        }
+
+        function handleClick() {
+            clickCount++;
+
+            if (clickCount % 2 !== 0) {
+                stopChanging();   // odd click -> stop
+            } else {
+                startChanging();  // even click → start
+            }
+        }
+
+        // Start automatically when page loads
+        startChanging();
+    </script>
+
+</body>
+
+</html>
