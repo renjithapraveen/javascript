@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Website</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Welcome card -->
+        <div class="card">
+            <h2>Welcome!</h2>
+            <p>This is a simple website for beginners. It has a navigation bar and a working to-do list.</p>
+        </div>
+
+        <!-- To-do list card -->
+        <div class="card">
+            <h2>To-Do List</h2>
+            <input type="text" id="todoInput" placeholder="Enter a task">
+            <button class="primary" onclick="addTodo()">Add</button>
+            <ul id="todoList"></ul>
+        </div>
+    </div>
+
+    <script>
+        // To-do list
+   function addTodo() {
+        let input = document.getElementById("todoInput");
+        let list = document.getElementById("todoList");
+
+        let task = input.value;
+
+        if (task === "") return;
+
+        let li = document.createElement("li");
+        li.innerText = task;
+        // Create a delete button
+       let deleteBtn = document.createElement("button");
+       deleteBtn.innerText = "Delete";
+       deleteBtn.style.marginLeft = "10px";
+       deleteBtn.onclick = function () {
+           list.removeChild(li);
+       };
+
+       li.appendChild(deleteBtn);
+
+       list.appendChild(li);
+       input.value = "";
+    }
+
+
+    </script>
+</body>
+
+</html>

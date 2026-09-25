@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Me</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: deeppink;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: blueviolet;
+            color: deepskyblue;
+        }
+
+        .topnav a.active {
+            background-color: yellowgreen;
+            color: darkcyan;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: darkcyan;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #007b7b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a class="active" href="contactme.html">contact me</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <div class="content">
+        <h1>Contact Me</h1>
+        <p>If you have any questions, suggestions, or collaboration ideas, 
+            feel free to reach out using the form below.
+        </p>
+        <form>
+            <label>Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label>Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+
+</html>
