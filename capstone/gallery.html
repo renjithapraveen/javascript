@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: deeppink;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: blueviolet;
+            color: deepskyblue;
+        }
+
+        .topnav a.active {
+            background-color: yellowgreen;
+            color: darkcyan;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="contactme.html">contact me</a>
+        <a class="active" href="gallery.html">Gallery</a>
+    </div>
+
+    <div class="content">
+        <h1>Gallery</h1>
+        <p>Here are some moments and memories captured in our gallery.</p>
+        <div class="gallery">
+            <img src="image.jpg" alt="Image 1" >
+            <img src="image2.jpg" alt="Image 2">
+           
+        </div>
+    </div>
+</body>
+
+</html>
